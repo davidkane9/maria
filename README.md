@@ -4,5 +4,3 @@ This is a repo for work associated with estimating the mortality associated with
 
 https://github.com/c2-d2/pr_mort_official
 
-
-SP
