@@ -1,0 +1,15 @@
+name: "."
+title: "Hurricane Maria Death Rate"
+description: |
+  Hurricane Maria Death Rate
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "Media Coverage"
+      href: news.html
+    - text: "About"
+      href: about.html
+
+output: distill::distill_article

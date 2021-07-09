@@ -1,0 +1,49 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Authors, Objectives, Contact and Sources\n",
+      "author": [
+        {
+          "name": "David D. Kane",
+          "url": {}
+        },
+        {
+          "name": "Shreeram Patkar",
+          "url": {}
+        }
+      ],
+      "date": "`r Sys.Date()`",
+      "contents": "\r\nObjective\r\nThis site aims to compare the mortality rates estimated in (Kishore N 2018) to preceding official monthly statistics and comments on the unrealistic differences between the data sets. The site highlights and exemplifies the arguments in (Kane 2018) and displays them both visually and mathematically. Finally, this project discusses the implications of statistical discrepancies and their on the media coverage of such studies.\r\nContact\r\nDavid D. Kane Ph.D.\r\nEmail: dave.kane@gmail.com\r\nGitHub\r\nShreeram Patkar\r\nEmail: patkar.shr@gmail.com\r\nGitHub\r\n\r\n\r\n\r\nKane, D. 2018. “Mortality in Puerto Rico After Hurricane Maria.” N Engl J Med. https://doi.org/10.1056/NEJMc1810872.\r\n\r\n\r\nKishore N, Mahmud A, Marqués D. 2018. “Mortality in Puerto Rico After Hurricane Maria.” N Engl J Med. https://doi.org/10.1056/NEJMsa1803972.\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-07-08T20:47:44-04:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Hurricane Maria Death Rate",
+      "description": "Welcome to the website. I hope you enjoy it!\n",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-07-08T22:55:15-04:00"
+    },
+    {
+      "path": "news.html",
+      "title": "Media Coverage",
+      "description": "How discrepancies lead to headlines\n",
+      "author": [
+        {
+          "name": "David D. Kane",
+          "url": {}
+        },
+        {
+          "name": "Shreeram Patkar",
+          "url": {}
+        }
+      ],
+      "date": "`r Sys.Date()`",
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-07-08T20:47:46-04:00"
+    }
+  ],
+  "collections": []
+}

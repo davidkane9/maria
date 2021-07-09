@@ -1,0 +1,42 @@
+---
+title: "About this site"
+description: |
+  Authors, Objectives, Contact and Sources
+authors:
+  - name: David D. Kane
+            
+  - name: Shreeram Patkar
+date: "`r Sys.Date()`"
+output: distill::distill_article
+bibliography: bibliography.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Objective
+
+This site aims to compare the mortality rates estimated in [@kishore2018] to preceding official monthly statistics and comments on the unrealistic differences between the data sets. The site highlights and exemplifies the arguments in [@kane2018] and displays them both visually and mathematically. Finally, this project discusses the implications of statistical discrepancies and their on the media coverage of such studies. 
+
+## Contact
+
+### David D. Kane Ph.D.
+
+Email: dave.kane@gmail.com
+
+[GitHub](https://github.com/davidkane9)
+
+### Shreeram Patkar 
+
+Email: patkar.shr@gmail.com
+
+[GitHub](https://github.com/s-patkar)
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+---
+title: "Media Coverage"
+description: |
+  How discrepancies lead to headlines
+authors:
+  - name: David D. Kane
+    
+  - name: Shreeram Patkar
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## The Headlines
+
+  

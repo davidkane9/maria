@@ -1,0 +1,67 @@
+---
+title: "Hurricane Maria Death Rate"
+description: |
+  Welcome to the website. I hope you enjoy it!
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(tidyverse)
+library(distill)
+library(plotly)
+library(ggthemes)
+library(ggplot2)
+library(lubridate)
+library(gganimate)
+library(gifski)
+theme_set(theme_bw())
+
+official_deaths_raw <- read.csv(file = "official-deaths.csv")
+deaths_official <- readRDS("deaths_official.RDS")
+
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+# Learn more about publishing to GitHub Pages at:
+# https://rstudio.github.io/distill/publish_website.html#github-pages
+
+```
+
+```{r}
+
+deaths_clean <- deaths_official %>% 
+  pivot_longer(cols = c(-Year,-Pop, -Popv17), names_to = "Month") %>% 
+  mutate(date = paste(1,Month,Year)) %>% 
+  mutate(xdate = parse_date_time(x = date, orders = "dmy")) %>% 
+  mutate(d_rate = (value/Pop)*1000) %>% 
+  select(xdate, d_rate, value)
+```
+
+
+```{r}
+deaths_clean %>% 
+  ggplot(aes(x = xdate, y = d_rate))+
+  geom_col()+
+  geom_hline(yintercept=0.55, linetype="dashed", color = "red")+
+  labs(title = "Monthly official death rates and Kishore et. al Estimate",
+       subtitle = "Study estimates are drastically lower",
+       x = "Month",
+       y = "Death rate (Per 1000)")
+
+
+
+deaths_clean %>% 
+  ggplot(aes(x = month(xdate, label = TRUE), y = d_rate, group =year(xdate) ,color = factor(year(xdate))))+
+  geom_line()+
+  geom_hline(yintercept=0.55, linetype="dashed", color = "red")+
+  geom_text(aes("Mar", 0.54, label="Kishore et. al Estimate"))+
+  labs(title = "Monthly official death rates and Kishore et. al Estimate",
+       subtitle = "Study estimates are drastically lower",
+       x = "Month",
+       y = "Death rate (Per 1000)",
+       color = "Year")
+
+```
+
