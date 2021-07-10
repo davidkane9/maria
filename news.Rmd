@@ -1,19 +1,26 @@
 ---
 title: "Media Coverage"
-description: |
-  How discrepancies lead to headlines
 authors:
   - name: David D. Kane
-    
   - name: Shreeram Patkar
 date: "`r Sys.Date()`"
 output: distill::distill_article
+bibliography: bibliography.bib
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## The Headlines
 
-  
+### Making Headlines
+
+After being published, [@kishore2018] attracted significant media coverage from agencies around the world due to its drastic findings. Headlines like 
+[*"Hurricane Maria death toll in Puerto Rico is thousands higher than official count, study estimates"*](https://www.nbcnews.com/storyline/puerto-rico-crisis/hurricane-maria-death-toll-puerto-rico-thousands-higher-official-count-n878186) (NBC) 
+surfaced the internet and turned many heads due to their unprecedented claims. However, discrepancies between this study and other mortality-related paper's methodologies may actually be exaggerating the severity of hurricane Maria. 
+
+
+
+### Methodical Discrepancies
+
+Generally, disaster mortality studies include deaths directly caused by the event. [@katrina2005], a study on the deaths caused by hurricane Katrina, includes primarily deaths caused by incidences of drowning, injury and trauma over the span of 65 days. This narrow selection yielded a 971 person death-count, a number dwarfed by [@kishore2018]'s supposed 4,645. The vast difference in death tolls is in fact due to [@kishore2018]'s broader selection process which in addition to direct deaths, also accounts for indirect deaths caused by the worsening of chronic conditions, delayed medical treatments and more, Furthermore, [@kishore2018]'s surveys were conducted over a significantly longer period of 102 days. 

@@ -4,7 +4,6 @@ description: |
   Authors, Objectives, Contact and Sources
 authors:
   - name: David D. Kane
-            
   - name: Shreeram Patkar
 date: "`r Sys.Date()`"
 output: distill::distill_article
@@ -17,7 +16,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Objective
 
-This site aims to compare the mortality rates estimated in [@kishore2018] to preceding official monthly statistics and comments on the unrealistic differences between the data sets. The site highlights and exemplifies the arguments in [@kane2018] and displays them both visually and mathematically. Finally, this project discusses the implications of statistical discrepancies and their on the media coverage of such studies. 
+This site aims to compare the mortality rates estimated in [@kishore2018] to preceding official monthly statistics and comments on the unrealistic differences between the data sets. The site highlights and exemplifies the arguments in [@kane2018] and displays them both visually and mathematically. Finally, this project discusses the implications of statistical discrepancies and their effect on the media coverage of such studies. 
 
 ## Contact
 
