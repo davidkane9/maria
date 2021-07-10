@@ -1,0 +1,95 @@
+---
+title: "Hurricane Maria Death Rate"
+description: |
+  Welcome to the website. I hope you enjoy it!
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(tidyverse)
+library(distill)
+library(plotly)
+library(ggthemes)
+library(ggplot2)
+library(lubridate)
+library(gganimate)
+library(gifski)
+theme_set(theme_bw())
+
+official_deaths_raw <- read.csv(file = "official-deaths.csv")
+deaths_official <- readRDS("deaths_official.RDS")
+world_bank_deaths <- read.csv(file ="world_bank_deaths.csv")
+
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+# Learn more about publishing to GitHub Pages at:
+# https://rstudio.github.io/distill/publish_website.html#github-pages
+
+```
+
+```{r}
+
+deaths_clean <- deaths_official %>% 
+  pivot_longer(cols = c(-Year,-Pop, -Popv17), names_to = "Month") %>% 
+  mutate(date = paste(1,Month,Year)) %>% 
+  mutate(xdate = parse_date_time(x = date, orders = "dmy")) %>% 
+  mutate(d_rate = (value/Pop)*1000) %>% 
+  select(xdate, d_rate, value, Pop)
+
+wb_clean <- world_bank_deaths %>% 
+  filter(Country.Code == "PRI") %>% 
+  select(X2010:X2017) %>% 
+  pivot_longer(cols = X2010:X2017, names_to = "Year", values_to = "Death_Rate") %>% 
+  mutate(Year = str_remove(string = Year, pattern = "X"))
+```
+
+
+```{r}
+
+
+wb_clean %>% 
+  ggplot(aes(x = Year, y = Death_Rate))+
+  geom_col()+
+  geom_hline(yintercept= 2.6, linetype="dashed", color = "red")+
+  geom_label(aes(as.character(2016),3.5, label="Kane Calculated Estimate"), fill = "white")+
+  geom_hline(yintercept= 14.3, linetype="dashed", color = "blue")+
+  geom_label(aes(as.character(2016),13.5, label="Adjusted Study Results"), fill = "white")+
+  labs(title = "Annual Official Mortality Rates From World Bank",
+       subtitle = "Calculated estimate is lower. Adjusted study results are higher",
+       x = "Year",
+       y = "Annual Mortality Rate (Per 1000)",
+       caption = "Source: World Bank")+
+  theme_linedraw()
+
+
+deaths_clean %>% 
+  ggplot(aes(x = xdate, y = value, fill = xdate))+
+  geom_col()+
+  geom_hline(yintercept= ((14.3/1000)*3337177)/12, linetype="dashed", color = "red")+
+  geom_label(aes( x= parse_date_time(x= "2016-07-01", orders = "ymd" ), y=3750, label="Study's Average Monthly Mortality"), fill = "white")+
+  labs(title = "Monthly official death rates and Kishore et. al Estimate",
+       subtitle = "Study estimates are drastically lower",
+       x = "Month",
+       y = "Monthly Mortality",
+       caption = "Source: Kishore et. al (official_deaths.csv), San Juan: Statistics of Puerto Rico, 2018")+
+  theme(legend.position = "none")
+
+
+
+# deaths_clean %>% 
+#   ggplot(aes(x = month(xdate, label = TRUE), y = value, group =year(xdate) ,color = factor(year(xdate))))+
+#   geom_line()+
+#   geom_hline(yintercept=0.55, linetype="dashed", color = "red")+
+#   geom_text(aes("Mar", 0.54, label="Kishore et. al Estimate"))+
+#   labs(title = "Monthly official death rates and Kishore et. al Estimate",
+#        subtitle = "Study estimates are drastically lower",
+#        x = "Month",
+#        y = "Death rate (Per 1000)",
+#        color = "Year",
+#        caption = "Source: Kishore et. al (official_deaths.csv)")
+
+```
+
