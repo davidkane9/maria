@@ -20,7 +20,7 @@ This site aims to compare the mortality rates estimated in [@kishore2018] to pre
 
 ## Contact
 
-### David D. Kane Ph.D.
+### David Kane
 
 Email: dave.kane@gmail.com
 
