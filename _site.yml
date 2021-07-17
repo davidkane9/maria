@@ -9,6 +9,8 @@ navbar:
       href: index.html
     - text: "Media Coverage"
       href: news.html
+    - text: "Detailed Discussion"
+      href: discussion.html
     - text: "About"
       href: about.html
 
