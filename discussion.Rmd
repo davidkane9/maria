@@ -1,0 +1,70 @@
+---
+title: "Detailed Discussion"
+description: "Correspondance retrieved from [@kane2018]"
+date: "`r Sys.Date()`"
+output: distill::distill_article
+bibliography: bibliography.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Correspondance
+### Initial Response
+#### Author: David Kane
+The excess mortality estimates
+reported by Kishore et al. for the 102 days after
+Hurricane Maria depend on the quality of their
+data. I examined that quality by calculating mortality
+for the 263 days before Maria and then
+comparing that rate with those from other sources.
+Using the authors’ methodology and data, I calculate
+the mortality as 2.6 deaths (95% CI, 1.4 to 3.8)
+per 1000 persons from January 1 through September
+19, 2017. This rate is inconsistent with
+the rate calculated on the basis of the official
+monthly statistics for 2010 through 2017: 8.3
+deaths (95% CI, 8.2 to 8.4) per 1000 persons. It is
+almost statistically impossible for there to have
+been only 18 deaths in the 3299 households before
+Maria. The problem remains even when the
+authors’ later calculations, which adjusted for
+household size, are taken into account.
+
+
+### Author's Reply 
+#### Author: Satchit Balsari, Caroline O. Buckee, Rafael A. Irizarry,
+
+It is important to note that our study shed
+light not only on excess deaths but also on the
+possibility of prolonged, indirect effects of the
+hurricane, as well as causes of death and infrastructure
+disruption. The limitations of the use
+of post-disaster surveys to calculate mortality or
+excess deaths are well articulated in the literature. We attempted to address known challenges
+with sampling, stratification, and biases
+in the methods we adopted. As noted by Kane,
+the raw, prehurricane estimates of mortality
+from our survey were lower than historical averages.
+We have addressed this issue in detail, both
+in a Technical FAQ (https://github.com/c2-d2/pr_mort_official/blob/master/misc/technical-faq.pdf)
+and in a public discussion forum with
+Kane in June 2018 (https://github.com/c2-d2/pr_mort_official/issues/7).
+We were aware of this
+issue and did not use prehurricane data for any
+of the estimates reported in our article. We also
+note that when single-person households and
+age structure are included in the estimate, this
+low rate is brought within the range of the 2016
+death rate for Puerto Rico. The code and data
+required for this analysis are available at the link
+to the public discussion forum, above.
+
+## Discussion
+
+The author's reply to the initial response fails to appropriately address the issues brought forth by Kane. The primary issue in Kane's initial response states that the death rates as per [@kishore2018]'s calculations are drastically lower than the official statistics. In their response, Balsari et. al state that this is due to the underrepresentation of single-person households, and once mathematically adjusted, the figures do align. However, should this adjustment be made to [@kishore2018]'s post-hurricane rates as well, it results in an implausibly high figure (CI = [12.6, 24.4]). The discrepancies in the data suggest that the adjustments and/or the data collection are not accurate. 
+
+<!-- It should also be noted that in their reply, Balsari et. al state that they "did not use prehurricane data for any -->
+<!-- of the estimates reported in [their] article" meaning that  -->
+
