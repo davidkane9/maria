@@ -1,8 +1,9 @@
 ---
-title: "Hurricane Maria Death Rate"
+title: "Hurricane Maria Mortality Rate"
 description: |
-  Welcome to the website. I hope you enjoy it!
+  In 2018 [@kishore2018] was published and created significant controversy around data accuracy, measurement technique differences and overall plausibility. This website aims to display and comment on these issues.
 site: distill::distill_website
+bibliography: bibliography.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -48,62 +49,26 @@ wb_clean <- world_bank_deaths %>%
 
 ```{r}
 
-deaths_clean %>% 
+p1<- deaths_clean %>% 
   ggplot(aes(x= d_rate))+
   geom_histogram(color = "grey50", bins = 30, fill = "deepskyblue")+
   geom_vline(xintercept = (5.07/12),linetype="dashed", color = "grey50", size = 1)+
   geom_label(aes(0.4, 17.5, label = "Kishore et. al \nmonthly mortality \nrate before Maria"),
              label.size = 0,  color = "grey50", size = 3.5, nudge_x = 0.08)+
   labs(title = "Monthly Official Mortality Rates",
-       subtitle = "Kishore et. al pre-Maria estimate is significantly lower",
+       subtitle = "Kishore et. al pre-Maria estimate is implausibly lower",
        x = "Monthly Mortality Rate (Deaths per 1000 per Month) ",
-       y = "Count",
-       caption = "Source: Kishore et. al (adj_rates.RDS, deaths_official.RDS) ")+
+       y = "Count")+
   theme_clean()
-  
 
-
-
-# wb_clean %>% 
-#   ggplot(aes(x = Year, y = Death_Rate))+
-#   geom_col()+
-#   geom_hline(yintercept= 2.6, linetype="dashed", color = "red")+
-#   geom_label(aes(as.character(2016),3.5, label="Kane Calculated Estimate"), fill = "white")+
-#   geom_hline(yintercept= 14.3, linetype="dashed", color = "blue")+
-#   geom_label(aes(as.character(2016),13.5, label="Adjusted Study Results"), fill = "white")+
-#   labs(title = "Annual Official Mortality Rates From World Bank",
-#        subtitle = "Calculated estimate is lower. Adjusted study results are higher",
-#        x = "Year",
-#        y = "Annual Mortality Rate (Per 1000)",
-#        caption = "Source: World Bank")+
-#   theme_linedraw()
-
-
-# deaths_clean %>% 
-#   ggplot(aes(x = xdate, y = value, fill = xdate))+
-#   geom_col()+
-#   geom_hline(yintercept= ((14.3/1000)*3337177)/12, linetype="dashed", color = "red")+
-#   geom_label(aes( x= parse_date_time(x= "2016-07-01", orders = "ymd" ), y=3750, label="Study's Average Monthly Mortality"), fill = "white")+
-#   labs(title = "Monthly official death rates and Kishore et. al Estimate",
-#        subtitle = "Study estimates are drastically lower",
-#        x = "Month",
-#        y = "Monthly Mortality",
-#        caption = "Source: Kishore et. al (official_deaths.csv), San Juan: Statistics of Puerto Rico, 2018")+
-#   theme(legend.position = "none")
-
-
-
-# deaths_clean %>% 
-#   ggplot(aes(x = month(xdate, label = TRUE), y = value, group =year(xdate) ,color = factor(year(xdate))))+
-#   geom_line()+
-#   geom_hline(yintercept=0.55, linetype="dashed", color = "red")+
-#   geom_text(aes("Mar", 0.54, label="Kishore et. al Estimate"))+
-#   labs(title = "Monthly official death rates and Kishore et. al Estimate",
-#        subtitle = "Study estimates are drastically lower",
-#        x = "Month",
-#        y = "Death rate (Per 1000)",
-#        color = "Year",
-#        caption = "Source: Kishore et. al (official_deaths.csv)")
+p1
 
 ```
 
+
+###### This plot is a histogram of the monthly mortality rates from 2010 to 2017 (before Hurricane Maria) in Puerto Rico. The x-axis is the monthly mortality rate ($deaths_{monthly} / population_{annual} * 1000$) and the y-axis is the count. The dotted line represents the monthly mortality rate as per [@kishore2018]'s calculations. The original calculation in [@kishore2018] produced an annual mortality rate and was thus divided by twelve to be plotted on this graph. 
+
+
+### Calculation
+
+#### [N/A]

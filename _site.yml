@@ -1,13 +1,13 @@
 name: "."
-title: "Hurricane Maria Death Rate"
+title: "Hurricane Maria Mortality Rate"
 description: |
-  Hurricane Maria Death Rate
+  Hurricane Maria Mortality Rate
 output_dir: "docs"
 navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "Media Coverage"
+    - text: "Mortality Estimation"
       href: news.html
     - text: "Detailed Discussion"
       href: discussion.html
