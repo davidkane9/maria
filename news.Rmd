@@ -29,11 +29,39 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### How typical storm mortality is measured
 
-When approximating the loss of life, we characterize the loss as a “direct” death; that is, we attribute the fatality to a physical manifestation of the storm [@BAMS]. The most common examples of direct deaths are drowning in storm surge, storm-driven waves, rip currents, or freshwater flood from rain. They also include physical trauma incurred from windborne debris or structural failure induced by wind (tornadic and otherwise). Consequently, the official death toll for Hurricane Maria was estimated to be [64](https://www.telemundopr.com/noticias/puerto-rico/aumentan-a-64-las-muertes-por-el-huracan-maria/10690/).
+"When approximating the loss of life, [the US government] characterizes the loss as a “direct” death; that is, we attribute the fatality to a physical manifestation of the storm" [@BAMS]. The most common examples of direct deaths are drowning in storm surge, storm-driven waves, rip currents, or freshwater flood from rain. They also include physical trauma incurred from windborne debris or structural failure induced by wind (tornadic and otherwise). Consequently, the official death toll for Hurricane Maria was determined to be [64](https://www.telemundopr.com/noticias/puerto-rico/aumentan-a-64-las-muertes-por-el-huracan-maria/10690/).
 
-### What happened after the study was published
+### What happened (Timeline)
 
-Unlike previous official studies, [@kishore2018]'s methodology includes indirect deaths caused by the worsening of chronic conditions, delayed medical treatments and more. It thus has a far higher reported death toll of 4,625 as compared to other official studies. The differences in the definition of "excess mortality" between [@kishore2018] and the official study was ignored by the general media and lead to headlines such as [*"Puerto Rico’s Hurricane Maria Death Toll Could Exceed 4,000, New Study Estimates"*](https://www.nytimes.com/2018/05/29/us/puerto-rico-deaths-hurricane.html) (New York Times) and many subsequently flawed investigations. These consequently lead to public chaos and the presumed severity of the hurricane being inconsistent. Following the public outcry, the government of Puerto Rico "updated" its original mortality to 2,975 [@govtoll], yet another confusing and inconsistent figure.
+#### **September 2017** 
+
+Hurricane maria makes landfall and leaves behind a path of distruction
+
+#### **October 2017**
+
+The Puerto Rican government releases the official death toll of 64 people.
+
+#### **July 2018**
+
+[@kishore2018] is published in the New England Journal of Medicine and reveals that according to their study, the hurricane's mortality rate should be 4,625
+
+#### **July-August 2018**
+
+[@kishore2018] gains traction and starts making headlines such as the following:
+
+* [*"Puerto Rico’s Hurricane Maria Death Toll Could Exceed 4,000, New Study Estimates"*](https://www.nytimes.com/2018/05/29/us/puerto-rico-deaths-hurricane.html) (The New York Times)
+* [*"New Study Puts Hurricane Maria Death Toll in Puerto Rico at 4,600"*](https://www.wsj.com/articles/death-toll-from-hurricane-maria-may-exceed-4-600-in-puerto-rico-study-says-1527610573) (The Wall Street Journal)
+* [*"Harvard study estimates thousands died in Puerto Rico because of Hurricane Maria"*](https://www.washingtonpost.com/national/harvard-study-estimates-thousands-died-in-puerto-rico-due-to-hurricane-maria/2018/05/29/1a82503a-6070-11e8-a4a4-c070ef53f315_story.html) (The Washington Post)
+
+
+None of these initial articles included the important differences between [@kishore2018]'s study other official ones. As a result, [@kishore2018] was compared to the official death count even though one included indirect deaths and the other did not. Consequently, the presumed severity of the hurricane Maria was inconsistent.
+
+#### **August 2018**
+
+The government of Puerto Rico commissions a study released over two months that concludes with an estimated mortality of 2,975.
+
+
+<!-- Unlike previous official studies, [@kishore2018]'s methodology includes indirect deaths caused by the worsening of chronic conditions, delayed medical treatments and more. It thus has a far higher reported death toll of 4,625 as compared to other official studies. The differences in the definition of "excess mortality" between [@kishore2018] and the official study was ignored by the general media and lead to headlines such as [*"Puerto Rico’s Hurricane Maria Death Toll Could Exceed 4,000, New Study Estimates"*](https://www.nytimes.com/2018/05/29/us/puerto-rico-deaths-hurricane.html) (New York Times) and many subsequently flawed investigations. These consequently lead to public chaos and the presumed severity of the hurricane being inconsistent. Following the public outcry, the government of Puerto Rico "updated" its original mortality to 2,975 [@govtoll], yet another confusing and inconsistent figure. -->
 
 
 
