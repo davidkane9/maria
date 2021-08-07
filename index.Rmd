@@ -47,26 +47,28 @@ wb_clean <- world_bank_deaths %>%
 ```
 
 
-```{r}
+```{r, fig.align="center", fig.cap="This plot is a histogram of the monthly mortality rates from 2010 to 2017 (before Hurricane Maria) in Puerto Rico. The x-axis is the monthly mortality rate and the y-axis is the count. The arrow points to the monthly mortality rate as per [@kishore2018]'s calculations. In all, it is evident that the study's estimate is implausibly low"}
 
 p1<- deaths_clean %>% 
   ggplot(aes(x= d_rate))+
   geom_histogram(color = "grey50", bins = 30, fill = "deepskyblue")+
-  geom_vline(xintercept = (5.07/12),linetype="dashed", color = "grey50", size = 1)+
-  geom_label(aes(0.4, 17.5, label = "Kishore et. al \nmonthly mortality \nrate before Maria"),
+  #geom_vline(xintercept = (5.07/12),linetype="dashed", color = "grey50", size = 1)+
+  geom_label(aes(0.45, 7.5, label = "Kishore et. al \nmonthly mortality \nrate before Maria"),
              label.size = 0,  color = "grey50", size = 3.5, nudge_x = 0.08)+
   labs(title = "Monthly Official Mortality Rates",
        subtitle = "Kishore et. al pre-Maria estimate is implausibly lower",
        x = "Monthly Mortality Rate (Deaths per 1000 per Month) ",
        y = "Count")+
-  theme_clean()
+  theme_clean()+
+  geom_segment(aes(x = 0.473, y = 7, xend = 5.07/12, yend = 0),
+                  arrow = arrow(length = unit(0.5, "cm")), color = "grey", size = 1)
 
 p1
 
 ```
 
 
-###### This plot is a histogram of the monthly mortality rates from 2010 to 2017 (before Hurricane Maria) in Puerto Rico. The x-axis is the monthly mortality rate ($deaths_{monthly} / population_{annual} * 1000$) and the y-axis is the count. The dotted line represents the monthly mortality rate as per [@kishore2018]'s calculations. The original calculation in [@kishore2018] produced an annual mortality rate and was thus divided by twelve to be plotted on this graph. 
+<!-- This plot is a histogram of the monthly mortality rates from 2010 to 2017 (before Hurricane Maria) in Puerto Rico. The x-axis is the monthly mortality rate ($deaths_{monthly} / population_{annual} * 1000$) and the y-axis is the count. The dotted line represents the monthly mortality rate as per [@kishore2018]'s calculations. The original calculation in [@kishore2018] produced an annual mortality rate and was thus divided by twelve to be plotted on this graph.  -->
 
 
 ### Calculation
