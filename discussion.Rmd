@@ -1,6 +1,5 @@
 ---
 title: "Detailed Discussion"
-description: "Correspondance retrieved from [@kane2018]"
 date: "`r Sys.Date()`"
 output: distill::distill_article
 bibliography: bibliography.bib
@@ -10,8 +9,8 @@ bibliography: bibliography.bib
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Correspondance
-### Initial Response
+## Correspondence
+### Initial Response [@kane2018]
 #### Author: David Kane
 The excess mortality estimates
 reported by Kishore et al. for the 102 days after
@@ -33,10 +32,11 @@ authors’ later calculations, which adjusted for
 household size, are taken into account.
 
 
-### Author's Reply 
+### Annotated Section of Author's Reply [@resp2018] 
 #### Author: Satchit Balsari, Caroline O. Buckee, Rafael A. Irizarry,
 
-It is important to note that our study shed
+
+> It is important to note that our study shed
 light not only on excess deaths but also on the
 possibility of prolonged, indirect effects of the
 hurricane, as well as causes of death and infrastructure
@@ -44,16 +44,56 @@ disruption. The limitations of the use
 of post-disaster surveys to calculate mortality or
 excess deaths are well articulated in the literature. We attempted to address known challenges
 with sampling, stratification, and biases
-in the methods we adopted. As noted by Kane,
-the raw, prehurricane estimates of mortality
+in the methods we adopted. 
+
+These sentence do not answer any aspects of Kane's critique
+
+
+>
+As noted by Kane, the raw, prehurricane estimates of mortality
 from our survey were lower than historical averages.
-We have addressed this issue in detail, both
+
+This should have been mentioned in the paper. Not aligning with historical averages can be a cause for concern.
+
+>We have addressed this issue in detail, both
 in a Technical FAQ (https://github.com/c2-d2/pr_mort_official/blob/master/misc/technical-faq.pdf)
 and in a public discussion forum with
 Kane in June 2018 (https://github.com/c2-d2/pr_mort_official/issues/7).
-We were aware of this
+
+The Technical FAQ is addressed below:
+
+>>As mentioned in the paper, our survey is unable to capture deaths in single-person households. This introduces
+a bias that results in underestimation of both before and after the hurricane. The death rate in single-person households is found to be 0 — this cannot be true. First, the median age in this single-person households is 69. Second, this death rate is expected because we missed (i.e., could not
+count) the single-person households where there had been a death (as there was no one to answer the door!)(Technical FAQ)
+
+|         These details were not explained thoroughly enough in the paper. The paper mentioned 
+|         that single person households were under-counted but did not explain the reasoning  
+|         and impact of this issue. 
+| 
+<br />  
+  
+>> Removing all households with the size of one increases the “before estimate” but not by much. However, it is
+important to note that the households of size one appeared to be older, on average, than other households
+which likely results in an underestimate of the mortality rate if we simply remove these from our analysis.
+An alternative approach would be to plug in a more realistic rate for these households and then adjust for
+the bias favoring larger households. We took the conservative approach and plugged in the same rate for
+both before and after the hurricane. To compute a confidence interval we use Keyfitz’s approximation.
+
+|         The adjustments made to address these sampling, stratification, and bias challenges
+|         proved to not work. The pre-hurricane rate was mathematically adjusted to equal a 
+|         more plausible 7.72 deaths per 1000 however, this adjustment yields an implausibly 
+|         high post-hurricane mortality rate of 18.2 per 1000 (which would equal roughly 
+|         58,000 people). Thus, the adjustments alone do not seems to be reliable.
+<br />
+  
+
+>We were aware of this
 issue and did not use prehurricane data for any
-of the estimates reported in our article. We also
+of the estimates reported in our article.
+
+That is a bug, not a feature, of the paper. It is good that the authors compare various measures from the survey with ACS data. But then why did they not compare the pre-Maria mortality rate from the survey with the official statistics? That seems like a big oversight. After all, this is a paper about mortality! There is no more important way to judge the quality of the survey than to see if it got pre-Maria mortality "correct."
+
+>We also
 note that when single-person households and
 age structure are included in the estimate, this
 low rate is brought within the range of the 2016
@@ -61,10 +101,11 @@ death rate for Puerto Rico. The code and data
 required for this analysis are available at the link
 to the public discussion forum, above.
 
+As mentioned earlier, although the adjustment brings the pre-hurricane rate close to the official numbers, the resulting post-hurricane mortality rate is exorbitantly high
+
 ## Discussion
 
 The author's reply to the initial response fails to appropriately address the issues brought forth by Kane. The primary issue in Kane's initial response states that the death rates as per [@kishore2018]'s calculations are drastically lower than the official statistics. In their response, Balsari et. al state that this is due to the underrepresentation of single-person households, and once mathematically adjusted, the figures do align. However, should this adjustment be made to [@kishore2018]'s post-hurricane rates as well, it results in an implausibly high figure (CI = [12.6, 24.4]). The discrepancies in the data suggest that the adjustments and/or the data collection are not accurate. 
 
 <!-- It should also be noted that in their reply, Balsari et. al state that they "did not use prehurricane data for any -->
 <!-- of the estimates reported in [their] article" meaning that  -->
-
