@@ -20,7 +20,7 @@
     {
       "path": "index.html",
       "title": "Hurricane Maria Mortality Rate",
-      "description": "In 2018 [@kishore2018] was published and created significant controversy around data accuracy, measurement technique differences and overall plausibility. This website aims to display and comment on these issues.\n",
+      "description": "In 2018 [@kishore2018] was published and argued that the mortality of Huricane Maria was much higher than what was officially accepted. This resulted in controversy [@kishore2018]'s findings were alarmingly high as they did not follow the same parameters as the official study. Kane argues that the data used in [@kishore2018]'s argument is lacking as explained in the [discussion](https://davidkane9.github.io/maria/discussion.html) tab. This website provides an overview of this issue \n",
       "author": [
         {
           "name": "David D. Kane",
@@ -32,7 +32,7 @@
         }
       ],
       "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\nFigure 1: This plot is a histogram of the monthly mortality rates from 2010 to 2017 (before Hurricane Maria) in Puerto Rico. The x-axis is the monthly mortality rate and the y-axis is the count. The arrow points to the monthly mortality rate as per (Kishore N 2018)’s calculations. In all, it is evident that the study’s estimate is implausibly low\r\n\r\n\r\n\r\n\r\nCalculation\r\n[N/A]\r\n\r\n\r\n\r\nKishore N, Mahmud A, Marqués D. 2018. “Mortality in Puerto Rico After Hurricane Maria.” N Engl J Med. https://doi.org/10.1056/NEJMsa1803972.\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-12T15:25:53-04:00"
+      "last_modified": "2021-08-13T17:37:54-04:00"
     },
     {
       "path": "news.html",

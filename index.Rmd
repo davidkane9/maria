@@ -1,10 +1,11 @@
 ---
 title: "Hurricane Maria Mortality Rate"
-description: |
-  In 2018 [@kishore2018] was published and created significant controversy around data accuracy, measurement technique differences and overall plausibility. This website aims to display and comment on these issues.
 authors:
   - name: David D. Kane
   - name: Shreeram Patkar
+description: |
+  In 2018 [@kishore2018] was published and argued that the mortality of Huricane Maria was much higher than what was officially accepted. This resulted in controversy [@kishore2018]'s findings were alarmingly high as they did not follow the same parameters as the official study. Kane argues that the data used in [@kishore2018]'s argument is lacking as explained in the [discussion](https://davidkane9.github.io/maria/discussion.html) tab. This website provides an overview of this issue.
+
 site: distill::distill_website
 bibliography: bibliography.bib
 ---
@@ -59,7 +60,7 @@ p1<- deaths_clean %>%
   geom_label(aes(0.45, 7.5, label = "Kishore et. al \nmonthly mortality \nrate before Maria"),
              label.size = 0,  color = "grey50", size = 3.5, nudge_x = 0.08)+
   labs(title = "Monthly Official Mortality Rates",
-       subtitle = "Kishore et. al pre-Maria estimate is implausibly lower",
+       subtitle = "Kishore et. al pre-Maria estimate is implausibly low",
        x = "Monthly Mortality Rate (Deaths per 1000 per Month) ",
        y = "Count")+
   theme_clean()+
