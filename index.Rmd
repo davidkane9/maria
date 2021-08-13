@@ -2,6 +2,9 @@
 title: "Hurricane Maria Mortality Rate"
 description: |
   In 2018 [@kishore2018] was published and created significant controversy around data accuracy, measurement technique differences and overall plausibility. This website aims to display and comment on these issues.
+authors:
+  - name: David D. Kane
+  - name: Shreeram Patkar
 site: distill::distill_website
 bibliography: bibliography.bib
 ---
