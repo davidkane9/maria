@@ -1,13 +1,12 @@
 ---
-title: "Hurricane Maria Mortality Rate"
+title: "Hurricane Maria Mortality"
 authors:
   - name: David D. Kane
   - name: Shreeram Patkar
-description: |
-  In 2018 [@kishore2018] was published and argued that the mortality of Huricane Maria was much higher than what was officially accepted. This resulted in controversy [@kishore2018]'s findings were alarmingly high as they did not follow the same parameters as the official study. Kane argues that the data used in [@kishore2018]'s argument is lacking as explained in the [discussion](https://davidkane9.github.io/maria/discussion.html) tab. This website provides an overview of this issue.
-
 site: distill::distill_website
 bibliography: bibliography.bib
+suppress_bibliography: true
+biblio-style: apalike
 ---
 
 ```{r setup, include=FALSE}
@@ -51,7 +50,7 @@ wb_clean <- world_bank_deaths %>%
 ```
 
 
-```{r, fig.align="center", fig.cap="This plot is a histogram of the monthly mortality rates from 2010 to 2017 (before Hurricane Maria) in Puerto Rico. The x-axis is the monthly mortality rate and the y-axis is the count. The arrow points to the monthly mortality rate as per [@kishore2018]'s calculations. In all, it is evident that the study's estimate is implausibly low"}
+```{r, fig.align="center", fig.cap="This plot is a histogram of the monthly mortality rates from 2010 to 2017 (before Hurricane Maria) in Puerto Rico. The x-axis is the monthly mortality rate and the y-axis is the count. The arrow points to the monthly mortality rate as per @kishore2018's calculations. In all, it is evident that the study's estimate is implausibly low"}
 
 p1<- deaths_clean %>% 
   ggplot(aes(x= d_rate))+
@@ -72,9 +71,4 @@ p1
 ```
 
 
-<!-- This plot is a histogram of the monthly mortality rates from 2010 to 2017 (before Hurricane Maria) in Puerto Rico. The x-axis is the monthly mortality rate ($deaths_{monthly} / population_{annual} * 1000$) and the y-axis is the count. The dotted line represents the monthly mortality rate as per [@kishore2018]'s calculations. The original calculation in [@kishore2018] produced an annual mortality rate and was thus divided by twelve to be plotted on this graph.  -->
-
-
-### Calculation
-
-#### [N/A]
+In 2018, @kishore2018 argued that the mortality of Hurricane Maria was much higher than what was officially accepted. This resulted in controversy because @kishore2018's findings were alarmingly high as they did not follow the same parameters as official studies. Kane argues that the data used in @kishore2018's argument is lacking as explained in the [discussion](https://davidkane9.github.io/maria/discussion.html) tab. This website provides an overview of this issue.
