@@ -10,7 +10,7 @@ nocite: '@*'
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Citation (NEEDS UPDATE)
+## Citation (NEEDS UPDATE) 
 
 > David Kane, & Shreeram Patkar. (2021). s-patkar/maria: Hurricane Maria Mortality (0.1). Zenodo. https://doi.org/10.5281/zenodo.5193700
 
