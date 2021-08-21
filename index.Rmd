@@ -21,9 +21,9 @@ library(lubridate)
 library(gganimate)
 theme_set(theme_bw())
 
-official_deaths_raw <- read.csv(file = "official-deaths.csv")
-deaths_official <- readRDS("deaths_official.RDS")
-world_bank_deaths <- read.csv(file ="world_bank_deaths.csv")
+official_deaths_raw <- read.csv(file = "data/official-deaths.csv")
+deaths_official <- readRDS("data/deaths_official.RDS")
+world_bank_deaths <- read.csv(file ="data/world_bank_deaths.csv")
 
 # Learn more about creating websites with Distill at:
 # https://rstudio.github.io/distill/website.html
