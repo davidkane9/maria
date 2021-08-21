@@ -47,6 +47,11 @@ wb_clean <- world_bank_deaths %>%
   select(X2010:X2017) %>% 
   pivot_longer(cols = X2010:X2017, names_to = "Year", values_to = "Death_Rate") %>% 
   mutate(Year = str_remove(string = Year, pattern = "X"))
+
+
+sd_diff<- (mean(deaths_clean$d_rate)-0.473)/sd(deaths_clean$d_rate)
+percent_below <- 1-(0.473/min(deaths_clean$d_rate))
+
 ```
 
 
