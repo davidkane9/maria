@@ -1,13 +1,13 @@
-cff-version: 1.1.0
+cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 authors:
-  - family-names: Kane
-    given-names: David
-  - family-names: Patkar
-    given-names: Shreeram
-    orcid: https://orcid.org/0000-0002-1232-9634
-title: s-patkar/maria: Hurricane Maria Mortality
+- family-names: "Kane"
+  given-names: "David"
+- family-names: "Patkar"
+  given-names: "Shreeram"
+  orcid: "https://orcid.org/0000-0002-1232-9634"
+title: "s-patkar/maria: Hurricane Maria Mortality"
 version: 0.1
 doi: 10.5281/zenodo.5193700
-date-released: 2017-12-18
-url: https://github.com/s-patkar/maria
+date-released: 2021-08-16
+url: "https://github.com/s-patkar/maria"

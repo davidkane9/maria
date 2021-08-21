@@ -58,7 +58,7 @@ All these articles reported and compared the mortality estimates of 64 and 4,625
 
 **October 2018:**
 
-@kane2018 notes the flawed mortality rate underlined in kishore 2018.
+@kane2018 notes the flawed mortality data underlying in @kishore2018.
 
 
 

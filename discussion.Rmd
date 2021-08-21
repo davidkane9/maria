@@ -33,7 +33,7 @@ authors’ later calculations, which adjusted for
 household size, are taken into account.
 
 
-**@resp2018 Replies to @kane2018 (Annotations not Indented)**
+**@resp2018 Replies to @kane2018 (our further comments not indented)**
 
 
 > It is important to note that our study shed
@@ -49,13 +49,12 @@ in the methods we adopted.
 These sentences do not answer any aspects of Kane's critique.
 
 
->
-As noted by Kane, the raw, prehurricane estimates of mortality
+> As noted by Kane, the raw, prehurricane estimates of mortality
 from our survey were lower than historical averages.
 
 This should have been mentioned in the paper. Also, saying pre-hurricane mortality estimates are "lower" is an understatement. In fact, they are 4 standard deviations short of the average and 20.6% below the lowest historical mortality rate. 
 
->We have addressed this issue in detail, both
+> We have addressed this issue in detail, both
 in a Technical FAQ (https://github.com/c2-d2/pr_mort_official/blob/master/misc/technical-faq.pdf)
 and in a public discussion forum with
 Kane in June 2018 (https://github.com/c2-d2/pr_mort_official/issues/7).
@@ -80,7 +79,7 @@ the bias favoring larger households. We took the conservative approach and plugg
 both before and after the hurricane. To compute a confidence interval we use Keyfitz’s approximation.
 
 ```{r}
-adjusted_rate_19 <- read.csv(file = "adjusted_rate_19.csv")
+adjusted_rate_19 <- read.csv(file = "data/adjusted_rate_19.csv")
 kbl(adjusted_rate_19)
 ```
 The above table is from the technical FAQ
