@@ -11,9 +11,9 @@ library(kableExtra)
 ```
 
 ## Correspondence
-### Initial Response [@kane2018]
-#### Author: David Kane
-The excess mortality estimates
+**@kane2018:**
+
+>The excess mortality estimates
 reported by Kishore et al. for the 102 days after
 Hurricane Maria depend on the quality of their
 data. I examined that quality by calculating mortality
@@ -33,8 +33,7 @@ authors’ later calculations, which adjusted for
 household size, are taken into account.
 
 
-### Annotated Section of Author's Reply [@resp2018] 
-#### Author: Satchit Balsari, Caroline O. Buckee, Rafael A. Irizarry,
+**@resp2018 Replies to @kane2018 (Annotations not Indented)**
 
 
 > It is important to note that our study shed
@@ -47,19 +46,21 @@ excess deaths are well articulated in the literature. We attempted to address kn
 with sampling, stratification, and biases
 in the methods we adopted. 
 
-These sentence do not answer any aspects of Kane's critique.
+These sentences do not answer any aspects of Kane's critique.
 
 
 >
 As noted by Kane, the raw, prehurricane estimates of mortality
 from our survey were lower than historical averages.
 
-This should have been mentioned in the paper. Also, saying pre-hurricane estimates are "lower" is an understatement. Complete inconsistency with historical data is a large issue
+This should have been mentioned in the paper. Also, saying pre-hurricane mortality estimates are "lower" is an understatement. In fact, they are 4 standard deviations short of the average and 20.6% below the lowest historical mortality rate. 
 
 >We have addressed this issue in detail, both
 in a Technical FAQ (https://github.com/c2-d2/pr_mort_official/blob/master/misc/technical-faq.pdf)
 and in a public discussion forum with
 Kane in June 2018 (https://github.com/c2-d2/pr_mort_official/issues/7).
+
+The authors of the paper deserve credit for their transparency and openness with this project.
 
 **From Technical FAQ:**
 
@@ -67,7 +68,7 @@ Kane in June 2018 (https://github.com/c2-d2/pr_mort_official/issues/7).
 a bias that results in underestimation of both before and after the hurricane. The death rate in single-person households is found to be 0 — this cannot be true. First, the median age in this single-person households is 69. Second, this death rate is expected because we missed (i.e., could not
 count) the single-person households where there had been a death (as there was no one to answer the door!)
 
-These details were not explained thoroughly enough in the paper. The paper mentioned that single person households were under-counted but did not explain the reasoning and impact of this issue. This comment raises the fundamental quandary in which the authors' find themselves. The number of deaths from before the hurricane is implausibly low. Any proposal to "adjust" those rates upwards requires that the same adjustment be applied to the death totals after the hurricane. Any set of adjustments which generate pre-maria mortality estimates within the historical range would lead to implausibly high post-maria mortality estimates.
+The paper mentioned that single person households were under-counted but did not explain the reasoning and impact of this issue. This comment raises the fundamental quandary in which the authors' find themselves. The number of deaths from before the hurricane is implausibly low. Any proposal to "adjust" those rates upwards requires that the same adjustment be applied to the death totals after the hurricane. Any set of adjustments which generate pre-Maria mortality estimates within the historical range would lead to implausibly high post-Maria mortality estimates.
  
 
   
@@ -82,9 +83,9 @@ both before and after the hurricane. To compute a confidence interval we use Key
 adjusted_rate_19 <- read.csv(file = "adjusted_rate_19.csv")
 kbl(adjusted_rate_19)
 ```
+The above table is from the technical FAQ
 
-
-Mathematically adjusting the pre-hurricane mortality rate to a more plausible 7.72 (CI = [4.16, 11.3]) deaths per 1000 is valid. However, this adjustment yields an implausibly high post-hurricane mortality rate of 18.2 per 1000 (CI = [12.6, 24.4]). This implies that 60,736 people died as opposed to the historical 29,340 and suggests that an extra 31,396 people died. In other words, corpses would be piling on the streets. Thus, the adjustments make no sense.
+Mathematically adjusting the pre-hurricane mortality rate yields a more plausible 7.72 deaths (CI = [4.16, 11.3]). However, this adjustment creates an implausibly high post-hurricane mortality rate of 18.2 per 1000 (CI = [12.6, 24.4]). This implies approximately 30,000 excess deaths. In other words, corpses would be piling up in the streets.
 
 **Back to NEJM Reply**  
 
@@ -92,7 +93,7 @@ Mathematically adjusting the pre-hurricane mortality rate to a more plausible 7.
 issue and did not use prehurricane data for any
 of the estimates reported in our article.
 
-That is a bug, not a feature, of the paper. It is good that the authors compare various measures from the survey with ACS data. But then why did they not compare the pre-Maria mortality rate from the survey with the official statistics? That seems like a big oversight. After all, this is a paper about mortality! There is no more important way to judge the quality of the survey than to see if it got pre-Maria mortality "correct". In essence, this is a damning admission because they never mentioned this issue in the paper (the number (5.5) should be given).
+That is a bug, not a feature, of the paper. It is good that the authors compare various measures from the survey with ACS data. But then why did they not compare the pre-Maria mortality rate from the survey with the official statistics? After all, this is a paper about mortality! There is no more important way to judge the quality of the survey than to see if it got pre-Maria mortality correct. It is statistical malpractice to be aware that your most important variable is completely inaccurate for a period of your study and to keep that fact from your readers.
 
 
 >We also
@@ -103,11 +104,5 @@ death rate for Puerto Rico. The code and data
 required for this analysis are available at the link
 to the public discussion forum, above.
 
-As mentioned earlier, although the adjustment brings the pre-hurricane rate close to the official numbers, the resulting post-hurricane mortality rate is implausibly high
+Although the adjustment makes the pre-hurricane rate reasonable, the resulting post-hurricane rate is unreasonable.
 
-## Discussion
-
-The author's reply to the initial response fails to appropriately address the issues brought forth by Kane. The primary issue in Kane's initial response states that the death rates as per [@kishore2018]'s calculations are drastically lower than the official statistics. In their response, Balsari et. al state that this is due to the underrepresentation of single-person households, and once mathematically adjusted, the figures do align. However, should this adjustment be made to [@kishore2018]'s post-hurricane rates as well, it results in an implausibly high figure (CI = [12.6, 24.4]). The discrepancies in the data suggest that the adjustments and/or the data collection are not accurate. 
-
-<!-- It should also be noted that in their reply, Balsari et. al state that they "did not use prehurricane data for any -->
-<!-- of the estimates reported in [their] article" meaning that  -->

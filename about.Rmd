@@ -1,19 +1,18 @@
 ---
-title: "About this site"
-description: |
-  Objectives, Contact and Sources
+title: "About"
 date: "`r Sys.Date()`"
 output: distill::distill_article
 bibliography: bibliography.bib
+nocite: '@*'
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Objective
+## Citation (NEEDS UPDATE) 
 
-This site aims to compare the mortality rates estimated in [@kishore2018] to preceding official monthly statistics and comments on the unrealistic differences between the data sets. The site highlights and exemplifies the arguments in [@kane2018] and displays them both visually and mathematically. Finally, this project discusses the implications of statistical discrepancies and their effect on the media coverage of such studies. 
+> David Kane, & Shreeram Patkar. (2021). s-patkar/maria: Hurricane Maria Mortality (0.1). Zenodo. https://doi.org/10.5281/zenodo.5193700
 
 ## Contact
 
@@ -21,13 +20,15 @@ This site aims to compare the mortality rates estimated in [@kishore2018] to pre
 
 Email: dave.kane@gmail.com
 
-[GitHub](https://github.com/davidkane9)
+GitHub: [davidkane9](https://github.com/davidkane9)
 
 ### Shreeram Patkar 
 
 Email: patkar.shr@gmail.com
 
-[GitHub](https://github.com/s-patkar)
+GitHub: [s-patkar](https://github.com/s-patkar)
+
+<div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-1232-9634" href="https://orcid.org/0000-0002-1232-9634" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0002-1232-9634</a></div>
 
 
 
